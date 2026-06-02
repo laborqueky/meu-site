@@ -375,9 +375,21 @@ export default function Home() {
       <Guidelines />
       <Faq />
       <Contact />
-      <footer className="py-12 bg-[#FDF8F0] text-center border-t border-[#C5A059]/10">
-        <p className="text-[#C5A059]/40 text-[10px] font-bold tracking-[0.3em] uppercase">Reis SPA • Ilhabela, SP • © 2026</p>
+      <footer className="py-12 bg-[#FDF8F0] text-center border-t border-[#C5A059]/10 space-y-3">
+        <p className="text-[#C5A059]/50 text-xs font-bold tracking-[0.2em] uppercase">Reis SPA • Ilhabela, SP • © 2026</p>
+        <p className="text-[#C5A059]/70 text-sm font-light tracking-wide">
+          Desenvolvido com carinho por{' '}
+          <a 
+            href="https://github.com/laborqueky" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="hover:opacity-80 border-b border-[#C5A059]/40 pb-0.5 transition-all font-semibold text-[#C5A059]"
+          >
+            Rebeca Gonçalves
+          </a>
+        </p>
       </footer>
+        
     </main>
   );
 }
