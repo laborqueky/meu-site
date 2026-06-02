@@ -50,7 +50,7 @@ const CANCEL_TEXT = `Para confirmar o seu horário, solicito um sinal de 50% do 
 
 O cancelamento ou reagendamento pode ser feito com até 12h de antecedência. Após esse período, o sinal não será reembolsado. Essa medida é necessária porque meu deslocamento já foi organizado e o bloqueio da agenda impede que outro cliente ocupe a vaga, que poderia ser direcionada a quem precisa.`;
 
-const ETHIC_TEXT = `Realizo exclusivamente práticas terapêuticas, profissionais e de bem-estar. Não realizo nenhum tipo de atendimento ou prática de cunho sexual. Quaisquer mensagens, insinuações ou condutas inadequadas resultarão no bloqueio imediato do contato e denúncia formal às autoridades competentes! Prezo pelo respeito mútuo em meu trabalho.`;
+const ETHIC_TEXT = `Realizo exclusivamente práticas terapêuticas, profissionais e de bem-estar. Não realizo nenhum tipo de atendimento ou prática de cunho sexual. Quaisquer mensagens, insinuações ou condutas inadequadas resultarão no bloqueio imediato do contato e denúncia formal às autoridades competentes! Prezo pelo respeito mutuo em meu trabalho.`;
 
 const MIOFASCIAL_TEXT = `Técnica terapêutica que atua nas fáscias, tecidos que envolvem músculos, articulações e estruturas do corpo. Por meio de pressões específicas e alongamentos, ajuda a liberar tensões, aderências e restrições de movimento, promovendo alívio da dor, melhora da mobilidade e maior consciência corporal.
 
@@ -121,7 +121,7 @@ function Services() {
           <SectionTitle subtitle="Tratamento & Funcionalidade" title="Massagens Terapêuticas" />
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <ServiceCard name="Massagem Terapêutica Funcional" description="Um protocolo completo desenvolvido por mim para tratar a causa das dores e tensões. Integro de forma estratégica manobras profundas, alongamentos de Thai Massage, pedras quentes e ventosaterapia. Atuo na liberação muscular profunda, melhora da mobilidade, estímulo da circulação e redução de sobrecargas." duration="75 min" />
-            <ServiceCard name="Massagem Terapêutica" description="Técnica indicada para quem sente dores musculares, tension crônica ou fadiga física. Meu toque terapêutico profundo ajuda a aliviar os desconfortos localizados, relaxa a musculatura e ativa a circulação, restaurando seu corpo e trazendo sensação de leveza imediata." duration="60 min / 75 min" />
+            <ServiceCard name="Massagem Terapêutica" description="Técnica indicada para quem sente dores musculares, tensão crônica ou fadiga física. Meu toque terapêutico profundo ajuda a aliviar os desconfortos localizados, relaxa a musculatura e ativa a circulação, restaurando seu corpo e trazendo sensação de leveza imediata." duration="60 min / 75 min" />
             <ServiceCard name="Massagem Integrativa" description="Uma experiência totalmente personalizada que combino de acordo com o que seu corpo precisa no momento do atendimento. Do relaxamento profundo à revitalização muscular, planejo cada toque para equilibrar seu corpo e mente (Exceto rituais Ayurvédicos)." duration="75 min" />
             <ServiceCard name="Liberação Miofascial" description={MIOFASCIAL_TEXT} duration="60 min / 80 min" />
           </div>
@@ -358,6 +358,11 @@ function Contact() {
 }
 
 export default function Home() {
+  // ATIVANDO O EFEITO PARA FORÇAR O TÍTULO NA ABA DO NAVEGADOR
+  useEffect(() => {
+    document.title = "Reis SPA | Onde o toque se torna intenção";
+  }, []);
+
   return (
     <main className="min-h-screen selection:bg-[#C5A059] selection:text-[#FDF8F0] font-sans scroll-smooth">
       <Hero />
